@@ -1,0 +1,67 @@
+        <%- include("header2.ejs") %>
+        <!-- Main content -->
+        <div class="container grid display-flex" style="height:100%;">
+            
+            <div class="leftcol grid column-4 no-border display-flex flex-column z-index-1" style="background:#ffffffeb;max-width:380px;margin:0px;border-top:1px solid #f4f4f4 !important;border-right:2px solid #f4f4f4 !important;box-shadow:0px 10px 20px 0px #fafafa;">
+                <input type="search" placeholder="Search messages" style="width:calc(100% - 64px);padding:10px;margin:20px auto;border:2px solid #ff53118f;border-radius:16px;outline:none;"/>
+                <hr style="border:0;border-bottom:1px solid #f4f4f4">
+                <div>
+                    <div class="grid display-flex" style="padding:4px 0 6px 0;border-bottom:1px solid #f4f4f4;">
+                        <div class="display-flex">
+                            <div class="avatar overflow-hide inline-block">
+                                <img class="absolute-center" src="../images/avatar.png"/>
+                            </div>
+                            <div class="display-flex flex-column">
+                                <h4 class="margin-y-auto" style="width:max-content;">Abel Akponine</h4>
+                                <span class="msg-preview">Hello!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid display-flex" style="padding:4px 0 6px 0;border-bottom:1px solid #f4f4f4;">
+                        <div class="display-flex">
+                            <div class="avatar overflow-hide inline-block">
+                                <img class="absolute-center" src="../images/avatar.png"/>
+                            </div>
+                            <div class="display-flex flex-column">
+                                <h4 class="margin-y-auto">Abel Akponine</h4>
+                                <span class="msg-preview">Hello!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="centercol grid column-5x2 no-margin no-border display-flex flex-column overflow-y-auto" data-id="<%=myData.ID%>">
+                
+            </div>
+            
+            <div class="rightcol grid column-3 no-margin no-border overflow-y-auto">
+                <!-- Local Stories -->
+                <%- include("widgets/stories.ejs")%>
+                <!-- World Story -->
+                <%- include("widgets/world-stories.ejs")%>
+            </div>
+            
+            <!-- App Menu -->
+            <%- include("widgets/menu.ejs")%>
+            <!-- New Post -->
+            <%- include("widgets/new-post.ejs")%>
+            <!-- User Contacts -->
+            <%- include("widgets/contacts.ejs")%>
+            <!-- Comments Section -->
+            <%- include("widgets/comment-layout.ejs")%>
+            <!-- Add New Contact -->
+            <%- include("widgets/new-contacts.ejs")%>
+        </div>
+        
+        <div class="fixed z-index-10" style="display:none;bottom:6%;right:2%;">
+            <button style="background:#ff5311;width:24px;height:24px;border:0;color:white;font-size:1.1rem;padding:6px;border-radius:50%;"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+    <!-- SCripts -->
+    <script src="../js/glido.app.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/feeds.js"></script>
+    <script src="../js/slider.js"></script>
+</body>
+</html>

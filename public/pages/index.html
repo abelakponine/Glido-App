@@ -1,0 +1,88 @@
+        <!-- Main content -->
+        <div class="container grid display-flex" style="height:100%;">
+
+            <div class="slide grid column-3x2 no-border shadow display-flex flex-column" style="background:#ffffffeb;min-width:450px;height:65%;border-radius:20px;margin:4% 40px 80px 80px;">
+                <div class="overflow-hide relative" style="height:calc(100% - 40px);border-radius:20px;">
+                    <img class="slide-item active" src="../images/chatting.jpg" style="width:100%;height:100%;"/>
+                    <img class="slide-item" src="../images/Cinema.png" style="width:100%;height:100%;"/>
+                    <img class="slide-item" src="../images/education.jpg" style="width:100%;height:100%;"/>
+                    <img class="slide-item" src="../images/game.jpg" style="width:100%;height:100%;"/>
+                    <img class="slide-item" src="../images/medical.jpg" style="width:100%;height:100%;"/>
+                    <img class="slide-item" src="../images/shopping.webp" style="width:100%;height:100%;"/>
+                    <img class="slide-item" src="../images/business.jpg" style="width:100%;height:100%;"/>
+                </div>
+                <div class="slide center" style="height:max-content;margin-bottom: 2px;">
+                    <span class="slide-indicator active"></span>
+                    <span class="slide-indicator"></span>
+                    <span class="slide-indicator"></span>
+                    <span class="slide-indicator"></span>
+                    <span class="slide-indicator"></span>
+                    <span class="slide-indicator"></span>
+                    <span class="slide-indicator"></span>
+                </div>
+            </div>
+
+            <div class="grid column-3 center shadow" style="background:#ffffffeb;min-width:320px;height:55%;border-radius:10px;margin:6% 120px 80px 40px;padding:1% 2%;">
+                <div class="overflow-y-auto" style="height:100%;">
+                    <h3 style="color:#404040;">Welcome to Glido Connect &trade;</h3>
+
+                    <!-- Type writer -->
+                    <span id="typewriter" data-text="Welcome to Glido Connect&trade; App, Easy connection with friends and family&nbsp;:), Fast and Responsive With Real-Time Communication., Bringing you the best of connectivity.." data-speed="40" style="font-size:15px;"> </span>
+
+                    <!-- Login input form -->
+                    <form method="POST" action="login" onsubmit="doLogin(this, event)">
+                        <input name="username" type="text" placeholder="Username or Email"/>
+                        <input name="password" type="password" placeholder="Password"/>
+                        <p></p>
+                        <button class="btn hoverBtn active" style="border:2px solid #ff5311;font-size:15px;">Login <i class="fa fa-spinner fa-spin display-hide" style="margin-left:4px;"></i></button>
+                        <p>&nbsp;</p>
+                    </form>
+                </div>
+            </div>
+            <!-- User registration -->
+            <div id="signup" class="grid column-3 absolute-center z-index-10 flex-column" style="display:none;background:white;top:45%;height:65%;border-radius:10px;border-bottom:15px solid white;">
+                <button class="btn no-border relative z-index-10" style="width:14px;height:14px;padding:6px !important;border-radius:50%;margin:0 4px 0 auto;outline:none;" onclick="hideRegistration()"><i class="fas fa-times"></i></button>
+                <div class="overflow-y-auto" style="height:100%;margin-top:-4px;">
+                    <h4 style="margin-left:20px;">User registration</h4>
+                    <form method="POST" action="signup" onsubmit="doSignup(this, event)">
+                        <input name="firstname" placeholder="Firstname"/>
+                        <input name="lastname" placeholder="Lastname"/>
+                        <div class="display-flex" style="margin:10px 0;border-bottom:1px solid #f4f4f4;padding-bottom:20px;">
+                            <span class="vertical-align-middle" style="height:max-content;white-space:nowrap;font-weight:bold;margin:auto 20px auto 0">Date of Birth: </span><input type="date" name="dob" value="2020-09-23"/>
+                        </div>
+                        <span style="text-align: left;">
+                            <input class="grid column-5 no-border" type="radio" name="gender" value="male" />
+                            <span class="grid column-5 no-border">Male</span>
+                            <input class="grid column-5 no-border" type="radio" name="gender" value="female"/>
+                            <span class="grid column-5 no-border">Female</span>
+                        </span>
+                        <input type="email" name="email" placeholder="Email"/>
+                        <input type="tel" name="telephone" placeholder="Telephone"/>
+                        <input type="text" name="location" placeholder="Location"/>
+                        <input name="username" placeholder="Username"/>
+                        <input type="password" name="password" placeholder="Password"/>
+                        <p></p>
+                        <button class="btn hoverBtn active" style="border:2px solid #ff5311;font-size:15px;">Register <i class="fa fa-spinner fa-spin display-hide" style="margin-left:4px;"></i></button>
+                        <p>&nbsp;</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="grid column-1 no-margin no-border fixed display-flex shadow rowspan" style="background:white;padding:1.5% 1%;color:#ff5311;min-height:25px;bottom:0;">
+            <div class="links grid column-1 no-padding no-border no-margin center" style="font-size:1.8rem;">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="download grid no-border no-padding display-flex relative" style="width:400px;">
+                <h3 class="no-margin" style="width:max-content;margin:auto !important;">Get the app!</h3>
+            </div>
+        </footer>
+    </div>
+    <!-- SCripts -->
+    <script src="../js/index.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/glido.app.js"></script>
+</body>
+</html>

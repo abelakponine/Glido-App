@@ -1,0 +1,102 @@
+* {
+    text-rendering: optimizeSpeed;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: #f5f5f5ad;
+}
+::-webkit-scrollbar-thumb {
+    background: #ffb3a320;
+}
+.story *::-webkit-scrollbar-thumb {
+    background: #f2f2f2;
+    border-radius: 10px;
+}
+.story *::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+.bgimage {
+    background: url(../images/bg_social_doodles.jpg) #fdfdfdf2;
+    background-blend-mode: color;
+    background-size: 320px;
+}
+.container {
+    min-height: 500px;
+}
+header {
+    box-shadow: 0 0 40px #00000c0f;
+}
+footer .links i {
+    margin: 0 4px;
+    padding: 4px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+footer .links i:hover {
+    border: 2px solid #ff5311;
+    border-radius: 50%;
+}
+.avatar {
+    background-color: #fafafa;
+    width: 45px;
+    height: 45px;
+    margin-left: 50px;
+    margin: 6px 20px;
+    border-radius: 50%;
+    position: relative;
+}
+.avatar img {
+    width: 100%;
+    position: absolute;
+}
+.msg-preview {
+    background: #fafafa;
+    padding: 5px 10px;
+    margin-top: -4px;
+    border-radius: 0 14px 14px;
+}
+.story .story-item {
+    background:#f4f4f4;
+    min-width: 100px;
+    height: 120px;
+    margin: 0 2px !important;
+    border-radius: 6px;
+}
+#contacts .contact-item {
+    background:#f9f9f9;
+    min-width: 120px;
+    height: 160px;
+    margin: 4px !important;
+    padding: 6px 0;
+    border-radius: 6px;
+    vertical-align: middle;
+}
+#contacts .contact-item .avatar {
+    margin-top: 10% !important;
+}
+.menu-item {
+    background: #fbfbfb;
+    height: 50px;
+    margin: 1% !important;
+    padding: 20px 0 !important;
+    color: #555;
+    line-height: 1.5;
+    border-radius: 20px;
+    border: 0 !important;
+}
+.menu-item:hover,.menu-item:active {
+    color: #ff5311;
+}
+.menu-item .title {
+    display: inline-block;
+    margin-top: 4px;
+}
+.menu-item * {
+    vertical-align: middle;
+}
+hr {
+    display: block;
+    border: 0;
+    border-bottom: 1px solid #d4d4d4;
+}

@@ -1,0 +1,50 @@
+            <%
+                feeds.forEach((feed)=>{ %>
+                    
+                <div class="shadow relative" style="background:#ffffffeb;min-width:320px;height:max-content;border-radius:10px;margin:5px;padding:2%;" ondblclick="doLike(this, event)">
+                    <span class="vHeart absolute fas fa-heart z-index-10 opacity-08" style="display:none;font-size:3.5rem;color:#ff5311;left:50%;top:50%;transform:translate(-50%,-50%);"></span>
+                    <div style="height:100%;">
+                        <div class="avatar overflow-hide no-margin inline-block vertical-align-middle" style="margin-right:10px !important;border:3px solid #ff53118f;">
+                            <img class="absolute-center" src="../images/Abel.jpg"/>
+                        </div>
+                        <h4 class="inline-table margin-y-auto vertical-align-middle"><%=feed.firstname+" "+feed.lastname%></h4>
+                            
+                        <p><%=feed.content%></p>
+                        <p></p>
+                        <%
+                            let imgExt = ['image/jpeg','image/webp','image/png','image/gif'];
+                            let vidExt = ['video/mp4'];
+                            if (vidExt.includes(feed.media_type)){
+                        %>
+                            <video src="/files/<%=feed.ID%>/<%=feed.media%>#t=1.8" controls loop style="background:black;width:100%;height:240px;border-radius:8px;outline:none;" ondblclick="$(this).parent().parent().dblclick()"></video>
+                        <%
+                            }
+                            else if (imgExt.includes(feed.media_type)) {
+                        %>
+                            <div style="display:block;background:#252525;width:100%;height:240px;margin:auto;border-radius:8px;outline:none;position:relative;overflow:hidden;user-select:none;-moz-user-select:none;">
+                                <img src="/files/<%=feed.ID%>/<%=feed.media%>" style="display:block;width:100%;height:auto;margin:auto;outline:none;position:absolute;left:50%;transform:translateX(-50%);filter:blur(35px) brightness(80%);opacity:0.8;"/>
+                                <img src="/files/<%=feed.ID%>/<%=feed.media%>" style="display:block;width:auto;height:240px;margin:auto;outline:none;position:absolute;left:50%;transform:translateX(-50%);"/>
+                            </div>
+                        <%
+                            }
+                        %>
+                        <p></p>
+                        <div class="display-flex" data-postid="<%=feed.postid%>">
+                            <button class="btn" style="background:#f1f1f1;color:#a4a4a4;padding:6px !important;font-size:1.2rem;border-radius:50% !important;height:20px;width:20px;display:flex;border:0;" onclick="$(this).parent().parent().dblclick()">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <span class="inline-table" style="font-size:14px;margin:auto 6px"> <%=JSON.parse(feed.likes).length%> </span>
+                            <span class="comment-btn cursor-pointer display-flex" onclick="showComments(this, <%=myID%>)">
+                                <button class="btn" style="background:#f1f1f1;color:#a4a4a4;padding:6px !important;font-size:1.2rem;border-radius:50% !important;height:20px;width:20px;margin:0 10px;display:flex;border:0;">
+                                    <i class="fas fa-comment inline-table"></i>
+                                </button>
+                                <span class="inline-table" style="font-size:14px;margin:auto 0"> 4 Comments </span>
+                            </span>
+                            <button class="btn" style="background:#ff9f7a;color:white;padding:6px !important;margin:0 20px 0 auto;font-size:1.2rem;border-radius:50% !important;height:20px;width:20px;display:flex;border:0;">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            <%  });
+            %>

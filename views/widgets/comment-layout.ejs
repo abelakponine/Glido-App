@@ -1,0 +1,20 @@
+
+<!-- Comments -->
+<div id="new-comment" class="grid column-2 no-border absolute-center z-index-10 flex-column" style="display:none;background:white;max-width:550px;top:45%;height:65%;border-radius:10px;border-bottom:15px solid white;">
+    <div class="display-flex">
+        <h4 style="margin-left:10px;">Comments</h4>
+        <button class="btn no-border relative z-index-10" style="width:14px;height:14px;padding:6px !important;border-radius:50%;margin:0 4px 0 auto;outline:none;" onclick="hideLayers()"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Comment items -->
+    <div class="comment-box overflow-x-hide overflow-y-auto" style="width:calc(98%);height:calc(100% - 120px);padding:1%;margin-top:-4px;font-family:arial;">
+        <!-- comments are loaded here -->
+    </div>
+    <div class="fixed display-flex" style="background:white;width:96%;bottom:0;left:0;padding:3% 2% 5% 2%;border-radius:10px;">
+        <div style="display:flex;width:92%;padding:6px 10px;margin:auto;border:1px solid #c0c0c038;border-radius:30px;">
+            <span class="far fa-smile cursor-pointer" style="font-size:1.6rem;margin:auto 20px auto auto;color:silver;"></span>
+            <input id="comment-input" name="new-comment" placeholder="start typing..." style="width:80%;padding:10px;border:1px solid #c0c0c073;border-radius:16px;"/>
+            <button class="btn hoverBtn" style="padding:10px !important;margin:auto auto auto 20px;border:1px solid #c0c0c038;border-radius:16px !important;" onclick="sendComment()">send</button>
+        </div>
+    </div>
+</div>

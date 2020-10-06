@@ -1,0 +1,22 @@
+{
+  "name": "glido",
+  "version": "1.0.0",
+  "description": "Socio-Commercial WebApp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abel Akponine",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "json": "^10.0.0",
+    "mysql": "^2.18.1",
+    "node": "^14.8.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}

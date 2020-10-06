@@ -1,0 +1,30 @@
+<!-- New Post -->
+<div id="new-post" class="grid column-2 no-border absolute-center z-index-10 flex-column" style="display:none;background:white;max-width:550px;top:45%;height:65%;border-radius:10px;border-bottom:15px solid white;">
+    <div class="display-flex">
+        <h4 style="margin-left:10px;">New Post</h4>
+        <button class="btn no-border relative z-index-10" style="width:14px;height:14px;padding:6px !important;border-radius:50%;margin:0 4px 0 auto;outline:none;" onclick="hideLayers()"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- New Post items -->
+    <div class="overflow-x-hide overflow-y-auto" style="width:calc(98%);height:calc(100% - 120px);padding:1%;margin-top:-4px;font-family:arial;">
+
+        <input class="display-hide" id="post-media" type="file" accept=".jpg,.png,.gif,.mp4" onchange="doPreviewMedia(this)"/>
+        <div id="preview-media" style="display:none;background:#eeeeee;height:240px;overflow:hidden;border-radius:8px;position:relative;"></div>
+
+        <div style="padding-top:10px;">
+            <span class="fa fa-smile cursor-pointer vertical-align-middle shadow" style="font-size:1.9rem;color:#ff5311;margin:0 10px;border-radius:50%;"></span>
+            <label for="post-media" class="btn no-border hoverBtn active vertical-align-middle">Add Image / Video</label>
+        </div>
+        <p>
+            <textarea id="content" placeholder="Share your thoughts." style="width:calc(100% - 4px - 4%);height:80px;padding:2%;border:2px solid #ff531150;border-radius:6px;font-family:arial;font-size:14.5px;line-height:1.5;resize:none;outline:none;"></textarea>
+        </p>
+        <p id="author" data-author="<%=myData.ID%>">
+            <span style="display:none;">
+                <input id="tags" placeholder="#tags" style="font-weight:bold;font-family:arial;" readonly/>
+                <input id="mention" placeholder="@mention" style="font-weight:bold;font-family:arial;" readonly/>
+            </span>
+            <button class="btn no-border hoverBtn active" style="float:right;clear:both;font-size:15px;border-radius:6px !important;" onclick="doCreatePost(this)"> <i class="fas fa-feather"></i> Create Post </button>
+        </p>
+
+    </div>
+</div>

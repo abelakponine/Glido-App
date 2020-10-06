@@ -1,0 +1,40 @@
+<!-- User Contacts -->
+<div id="contacts" class="overlay-item grid column-2 absolute-center shadow flex-column" style="display:none;background:white;top:45%;height:65%;border-radius:10px;border:0;border-bottom:15px solid white;z-index:11;">
+    <div class="display-flex">
+        <h4 style="margin-left:10px;">My Contacts</h4>
+        <input type="search" style="font-size:14px;margin:auto 10px auto auto;width:max-content;height:max-content;border:2px solid #ffaf92;outline:none;padding:8px;border-radius:14px;" placeholder="Search contacts"/>
+        <button class="btn hoverBtn no-border active" style="height:max-content;margin:auto auto auto 4px;padding:8px !important;border-radius:6px !important;" onclick="showAddNewContact()"><i class="fas fa-plus"></i> Add new</button>
+        <button class="btn no-border relative z-index-10" style="width:14px;height:14px;padding:6px !important;border-radius:50%;margin:0 4px 0 auto;outline:none;" onclick="hideOverlay()"><i class="fas fa-times"></i></button>
+    </div>
+    <!-- Contact items -->
+    <div class="overflow-y-auto relative rowspan" style="height:100%;margin-top:-4px;font-family:arial;">
+        <div class="contact-item grid column-4 no-border center">
+            <div class="avatar overflow-hide margin-auto inline-block vertical-align-middle" style="border:3px solid #ff53118f;">
+                <img class="absolute-center" src="../images/Abel.jpg"/>
+            </div>
+            <h5 class="contact-name" style="margin:6px auto">Abel Akponine</h5>
+            <small class="contact-username margin-auto" style="color:#fb4600;">@kingabel.a</small>
+            <div class="display-flex" style="background:#f3f3f3;margin-top:10px;border-radius:0 0 6px 6px;">
+                <button class="btn hoverBtn no-border active" style="height:max-content;margin:14px auto;padding:8px !important;border-radius:20px !important;font-size:1rem;"><i class="fas fa-comment"></i></button>
+                <button class="btn hoverBtn no-border active" style="background:rgb(17, 131, 7);height:max-content;margin:14px auto;padding:8px !important;border-radius:20px !important;font-size:1rem;" onclick="showCallOptions(this)"><i class="fas fa-phone"></i></button>
+                <button class="btn hoverBtn no-border active" style="background:#404040;height:max-content;margin:14px auto;padding:8px !important;border-radius:20px !important;font-size:1rem;" onclick="showContactDeleteOption(this)"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+        <!-- Inner dark layer -->
+        <div class="fixed innerDarkLayer z-index-10" style="display:none;background:#00000042;width:100%;height:100%;top:0;left:0;"></div>
+        <!-- Call options -->
+        <div class="callOptions grid absolute z-index-10" style="display:none;background:white;width:120px;height:max-content;padding:25px;top:30%;left:50%;transform:translate(-50%, -30%);border-radius:6px;">
+            <button class="btn no-border absolute z-index-10" style="width:14px;height:14px;padding:6px !important;border-radius:50%;margin:0 4px 0 auto;outline:none;right:0;top:5px;" onclick="hideCallOptions()"><i class="fas fa-times"></i></button>
+            <li class="hover cursor-pointer display-block"><i class="fas fa-phone" style="transform: scale-x(-90 deg);"></i> Voice call</li>
+            <hr style="width:calc(100% + 20px);margin-left:-10px;">
+            <li class="hover cursor-pointer display-block"><i class="fas fa-video"></i> Video call</li>
+        </div>
+        <!-- Contact delete option -->
+        <div class="deleteOption grid absolute center z-index-10" style="display:none;background:white;max-width:180px;height:max-content;padding:25px;top:30%;left:50%;transform:translate(-50%, -30%);border-radius:6px;">
+            <button class="btn no-border absolute z-index-10" style="width:14px;height:14px;padding:6px !important;border-radius:50%;margin:0 4px 0 auto;outline:none;right:0;top:5px;" onclick="hideContactDeleteOption()"><i class="fas fa-times"></i></button>
+            <p>Are you sure you want to remove this contact?</p>
+            <li class="btn hoverBtn active no-border cursor-pointer inline-block" style="height:max-content;line-height:24px;margin:8px;"> Yes </li>
+            <li class="btn cursor-pointer inline-block" style="height:max-content;line-height:20px;margin:8px;border:2px solid #dadada" onclick="hideContactDeleteOption()"> No </li>
+        </div>
+    </div>
+</div>

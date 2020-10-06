@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="expires" content="Sat, 17 Apr 1993 0:0:0 GMT"/>
+    <title>Glido &trade; | No.1 Social and Commercial Sofftware Application</title>
+    <link rel="stylesheet" type="text/css" href="../css/glido.app.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/jquery.min.js"></script>
+</head>
+<body class="display-flex">
+    <div class="bgimage rowspan absolute display-flex flex-column overflow-y-auto" style="height:100%">
+
+        <div id="header-layer" style="display:none;z-index:10;"></div>
+        <div id="overlayer" style="display:none;z-index:11;"></div>
+        <!-- Header -->
+        <header class="grid column-1 no-margin rowspan display-flex no-border no-padding" style="background:white;width:100%;">
+            <div class="grid no-border no-padding">
+                <img src="../images/logo.PNG" style="width:80px;margin:6px 50px;"/>
+            </div>
+            <div class="grid column-4 no-border no-padding display-flex">
+                <div class="avatar overflow-hide inline-block" style="border:3px solid #ff53118f;">
+                    <img class="absolute-center" src="../images/Abel.jpg"/>
+                </div>
+                <h4 class="margin-y-auto">Abel Akponine</h4>
+            </div>
+            <!-- <div class="nav inline-table grid column-3x2 no-padding no-border">
+                <ul class="list-item no-margin">
+                    <li class="inline-table btn hoverBtn active">Home</li>
+                    <li class="inline-table btn hoverBtn">Online Store</li>
+                    <li class="inline-table btn hoverBtn">Business</li>
+                    <li class="inline-table btn hoverBtn">News</li>
+                    <li class="inline-table btn hoverBtn">Cinema</li>
+                    <li class="inline-table btn hoverBtn">App Store</li>
+                    <li class="inline-table btn hoverBtn">For Developers</li>
+                </ul>
+            </div> -->
+            <div class="grid column-4 no-border display-flex no-padding">
+                <button class="btn" style="background:#f2f2f2;color:#ff5311;height:max-content;padding:8px 12px;border:0;border-radius:14px;outline:none;white-space:nowrap;"><i class="fas fa-feather-alt"></i> New Post </button>
+                <button class="btn" style="background:#f2f2f2;color:#ff5311;height:max-content;padding:8px 12px;border:0;border-radius:14px;outline:none;white-space:nowrap;" onclick="showRegistration()"><i class="fas fa-cog"></i> Settings </button>
+                <button class="btn" style="background:#f2f2f2;color:#ff5311;height:max-content;padding:8px 12px;border:0;border-radius:14px;outline:none;white-space:nowrap;" onclick="showRegistration()"><i class="fas fa-sign-out-alt"></i> Logout </button>
+                <button class="btn" style="background:white;color:#ff5311;padding:8px 12px;border:2px solid #ff5311;border-radius:14px;outline:none;white-space:nowrap;margin-left:20px;" onclick="showMenu()"><i class="fas fa-bars"></i> Menu </button>
+            </div>
+        </header>
